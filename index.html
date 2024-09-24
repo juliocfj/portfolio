@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Julio Junior</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Portfólio de Julio Junior</h1>
+        </header>
+        <nav>
+            <button class="tab" onclick="showSection('projects')">Projetos</button>
+            <button class="tab" onclick="showSection('technologies')">Tecnologias</button>
+            <button class="tab" onclick="showSection('hard-skills')">Hard Skills</button>
+            <button class="tab" onclick="showSection('soft-skills')">Soft Skills</button>
+            <button class="tab" onclick="showSection('positions')">Funções Atuadas</button>
+        </nav>
+        <main>
+            <section id="projects" class="content-section">
+                <h2>Projetos Realizados</h2>
+                <ul>
+                    <li>Projeto 1: Descrição do projeto 1</li>
+                    <li>Projeto 2: Descrição do projeto 2</li>
+                    <li>Projeto 3: Descrição do projeto 3</li>
+                </ul>
+            </section>
+            <section id="technologies" class="content-section" style="display: none;">
+                <h2>Tecnologias de Maior Conhecimento</h2>
+                <ul>
+                    <li>Google Cloud</li>
+                    <li>Kubernetes</li>
+                    <li>Terraform</li>
+                </ul>
+            </section>
+            <section id="hard-skills" class="content-section" style="display: none;">
+                <h2>Hard Skills</h2>
+                <ul>
+                    <li>Linux</li>
+                    <li>Windows</li>
+                    <li>Gerenciamento de Rede</li>
+                </ul>
+            </section>
+            <section id="soft-skills" class="content-section" style="display: none;">
+                <h2>Soft Skills</h2>
+                <ul>
+                    <li>Comunicação</li>
+                    <li>Trabalho em equipe</li>
+                    <li>Resolução de problemas</li>
+                </ul>
+            </section>
+            <section id="positions" class="content-section" style="display: none;">
+                <h2>Funções Atuadas</h2>
+                <ul>
+                    <li>IT Security Administrator</li>
+                    <li>Especialista em ITOps</li>
+                    <li>Consultor de TI</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
