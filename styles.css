@@ -1,0 +1,42 @@
+body {
+    background-color: #f9e7b2; /* Fundo amarelo areia */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab {
+    background-color: #6f3c3c; /* Cor bordô */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #5b2b2b; /* Tom mais escuro ao passar o mouse */
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section:target {
+    display: block;
+}
