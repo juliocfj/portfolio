@@ -1,15 +1,19 @@
 function toggleSection(sectionId) {
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
-        section.style.display = 'none';
+        section.style.display = 'none'; // Oculta todas as seções
     });
-    document.getElementById(sectionId).style.display = 'block';
+
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.style.display = 'block'; // Mostra a seção selecionada
 }
 
 function showContent(contentId) {
-    const hiddenContents = document.querySelectorAll('.hidden-content');
-    hiddenContents.forEach(content => {
-        content.style.display = 'none';
+    const contents = document.querySelectorAll('.hidden-content');
+    contents.forEach(content => {
+        content.style.display = 'none'; // Oculta todos os conteúdos
     });
-    document.getElementById(contentId).style.display = 'block';
+
+    const selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = 'block'; // Mostra o conteúdo selecionado
 }
