@@ -1,66 +1,67 @@
 body {
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    color: #333;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(249, 231, 178, 0.8);
+    position: relative;
 }
 
-header {
+header h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .tab {
-    background-color: #9370DB;
+    background-color: #9370DB; /* Roxo claro */
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.tab:hover {
-    background-color: #7a5bc9;
+    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .content-section {
     display: none;
+    margin-top: 20px;
 }
 
-.hidden-content {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+.dropdown {
+    position: relative;
 }
 
-ul {
+.dropdown ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.dropdown li {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
     cursor: pointer;
-    padding: 5px;
-    transition: background-color 0.3s;
+    border: 1px solid #ddd;
 }
 
-ul li:hover {
-    background-color: rgba(200, 200, 200, 0.5);
+.dropdown li:hover {
+    background-color: #f0f0f0;
 }
+
+.hidden-content {
+    margin-top: 10px;
+    display: none;
+}
+
