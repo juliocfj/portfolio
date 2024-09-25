@@ -16,6 +16,7 @@ body {
 header h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: white; /* Título branco */
 }
 
 nav {
@@ -26,7 +27,7 @@ nav {
 
 .tab {
     background-color: #9370DB; /* Roxo claro */
-    color: white;
+    color: white; /* Texto das abas branco */
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -37,6 +38,7 @@ nav {
 .content-section {
     display: none;
     margin-top: 20px;
+    color: white; /* Texto branco nas seções de conteúdo */
 }
 
 .dropdown {
@@ -49,19 +51,19 @@ nav {
 }
 
 .dropdown li {
-    background-color: #fff;
-    color: #333;
+    background-color: #9370DB; /* Roxo claro */
+    color: white; /* Texto da lista suspensa branco */
     padding: 10px;
     cursor: pointer;
     border: 1px solid #ddd;
 }
 
 .dropdown li:hover {
-    background-color: #f0f0f0;
+    background-color: #6A5ACD; /* Muda para roxo escuro ao passar o mouse */
 }
 
 .hidden-content {
     margin-top: 10px;
     display: none;
+    color: white; /* Texto dos conteúdos branco */
 }
-
