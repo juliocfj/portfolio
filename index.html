@@ -3,63 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Julio Junior</title>
+    <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Portfólio de Julio Junior</h1>
+            <h1>Meu Portfólio</h1>
         </header>
         <nav>
-            <button class="tab" onclick="showSection('projects')">Projetos</button>
-            <button class="tab" onclick="showSection('technologies')">Tecnologias</button>
-            <button class="tab" onclick="showSection('hard-skills')">Hard Skills</button>
-            <button class="tab" onclick="showSection('soft-skills')">Soft Skills</button>
-            <button class="tab" onclick="showSection('positions')">Funções Atuadas</button>
+            <button class="tab" onclick="toggleSection('projects')">Projetos</button>
+            <button class="tab" onclick="toggleSection('technologies')">Tecnologias</button>
+            <button class="tab" onclick="toggleSection('hard-skills')">Hard Skills</button>
+            <button class="tab" onclick="toggleSection('soft-skills')">Soft Skills</button>
+            <button class="tab" onclick="toggleSection('job-roles')">Funções</button>
         </nav>
-        <main>
-            <section id="projects" class="content-section">
-                <h2>Projetos Realizados</h2>
-                <ul>
-                    <li>Projeto 1: Descrição do projeto 1</li>
-                    <li>Projeto 2: Descrição do projeto 2</li>
-                    <li>Projeto 3: Descrição do projeto 3</li>
-                </ul>
-            </section>
-            <section id="technologies" class="content-section" style="display: none;">
-                <h2>Tecnologias de Maior Conhecimento</h2>
-                <ul>
-                    <li>Google Cloud</li>
-                    <li>Kubernetes</li>
-                    <li>Terraform</li>
-                </ul>
-            </section>
-            <section id="hard-skills" class="content-section" style="display: none;">
-                <h2>Hard Skills</h2>
-                <ul>
-                    <li>Linux</li>
-                    <li>Windows</li>
-                    <li>Gerenciamento de Rede</li>
-                </ul>
-            </section>
-            <section id="soft-skills" class="content-section" style="display: none;">
-                <h2>Soft Skills</h2>
-                <ul>
-                    <li>Comunicação</li>
-                    <li>Trabalho em equipe</li>
-                    <li>Resolução de problemas</li>
-                </ul>
-            </section>
-            <section id="positions" class="content-section" style="display: none;">
-                <h2>Funções Atuadas</h2>
-                <ul>
-                    <li>IT Security Administrator</li>
-                    <li>Especialista em ITOps</li>
-                    <li>Consultor de TI</li>
-                </ul>
-            </section>
-        </main>
+        <div id="projects" class="content-section">
+            <ul>
+                <li onclick="showContent('jumphost')">Instância de Jumphost</li>
+                <li onclick="showContent('http_load_balancer')">Balanceador de Carga HTTP com NGINX</li>
+                <li onclick="showContent('gcp_lab')">Laboratório Prático no Google Cloud</li>
+                <li onclick="showContent('k8s_update')">Atualização de Front-end em Aplicação Kubernetes</li>
+                <li onclick="showContent('lamp_stack')">Implantação de Pilha LAMP no Google Cloud</li>
+                <li onclick="showContent('db_migration')">Migração de Banco de Dados PostgreSQL para Cloud SQL</li>
+                <li onclick="showContent('knowledge_base')">Desenvolvimento de Base de Conhecimento Interna</li>
+                <li onclick="showContent('process_automation')">Automação de Processos de Suporte com Ansible e Terraform</li>
+            </ul>
+            <div id="jumphost" class="hidden-content">Implantei uma instância de jumphost para manutenção em uma rede segura, permitindo acesso controlado a servidores internos.</div>
+            <div id="http_load_balancer" class="hidden-content">Configurei um balanceador de carga HTTP usando NGINX, que distribui solicitações entre vários servidores para melhorar a disponibilidade e a escalabilidade.</div>
+            <div id="gcp_lab" class="hidden-content">Realizei um laboratório prático no Google Cloud, onde configurei uma rede VPC, regras de firewall, e criei balanceadores de carga com back-ends.</div>
+            <div id="k8s_update" class="hidden-content">Trabalhei em uma tarefa para atualizar o front-end de uma aplicação Kubernetes e configurar o escalonamento automático de pods e nós no cluster.</div>
+            <div id="lamp_stack" class="hidden-content">Implantei uma pilha LAMP usando o Cloud Marketplace no Google Cloud, configurando opções de implantação no Compute Engine.</div>
+            <div id="db_migration" class="hidden-content">Migrei um banco de dados PostgreSQL para o Cloud SQL utilizando o Database Migration Service e configurei a extensão pglogical.</div>
+            <div id="knowledge_base" class="hidden-content">Desenvolvi uma base de conhecimento interna para melhorar o acesso à informação entre os membros da equipe.</div>
+            <div id="process_automation" class="hidden-content">Automatizei processos de suporte utilizando Ansible e Terraform, melhorando a eficiência operacional.</div>
+        </div>
+        <div id="technologies" class="content-section">
+            <ul>
+                <li onclick="showContent('gcloud')">Google Cloud Platform</li>
+                <li onclick="showContent('kubernetes')">Kubernetes</li>
+                <li onclick="showContent('terraform')">Terraform</li>
+                <li onclick="showContent('ansible')">Ansible</li>
+                <li onclick="showContent('nginx')">NGINX</li>
+                <li onclick="showContent('linux')">Linux</li>
+                <li onclick="showContent('windows')">Windows</li>
+                <li onclick="showContent('network_management')">Gerenciamento de Rede</li>
+            </ul>
+            <div id="gcloud" class="hidden-content">Experiência na configuração e gerenciamento de serviços na Google Cloud Platform.</div>
+            <div id="kubernetes" class="hidden-content">Habilidade na orquestração de contêineres com Kubernetes.</div>
+            <div id="terraform" class="hidden-content">Uso do Terraform para automação e provisionamento de infraestrutura como código.</div>
+            <div id="ansible" class="hidden-content">Implementação de automação de processos e gerenciamento de configuração com Ansible.</div>
+            <div id="nginx" class="hidden-content">Configuração e gerenciamento de servidores web com NGINX.</div>
+            <div id="linux" class="hidden-content">Experiência em administração de sistemas Linux.</div>
+            <div id="windows" class="hidden-content">Experiência em ambientes Windows, incluindo gerenciamento de servidores.</div>
+            <div id="network_management" class="hidden-content">Habilidades em gerenciamento de redes e infraestrutura de TI.</div>
+        </div>
+        <div id="hard-skills" class="content-section">
+            <ul>
+                <li onclick="showContent('networking')">Redes</li>
+                <li onclick="showContent('security')">Segurança da Informação</li>
+                <li onclick="showContent('cloud_infrastructure')">Infraestrutura em Nuvem</li>
+                <li onclick="showContent('scripting')">Scripting e Automação</li>
+            </ul>
+            <div id="networking" class="hidden-content">Profundo conhecimento em protocolos de rede e configuração de dispositivos de rede.</div>
+            <div id="security" class="hidden-content">Experiência em práticas de segurança da informação e gerenciamento de incidentes.</div>
+            <div id="cloud_infrastructure" class="hidden-content">Experiência na construção e gerenciamento de infraestrutura em nuvem.</div>
+            <div id="scripting" class="hidden-content">Habilidade em scripting para automação de tarefas e processos.</div>
+        </div>
+        <div id="soft-skills" class="content-section">
+            <ul>
+                <li onclick="showContent('teamwork')">Trabalho em Equipe</li>
+                <li onclick="showContent('communication')">Comunicação</li>
+                <li onclick="showContent('problem_solving')">Resolução de Problemas</li>
+                <li onclick="showContent('adaptability')">Adaptabilidade</li>
+            </ul>
+            <div id="teamwork" class="hidden-content">Capacidade de trabalhar efetivamente em equipe para alcançar objetivos comuns.</div>
+            <div id="communication" class="hidden-content">Habilidade em comunicar informações complexas de forma clara e eficiente.</div>
+            <div id="problem_solving" class="hidden-content">Capacidade de analisar problemas e encontrar soluções eficazes.</div>
+            <div id="adaptability" class="hidden-content">Flexibilidade para se adaptar a novas situações e ambientes de trabalho.</div>
+        </div>
+        <div id="job-roles" class="content-section">
+            <ul>
+                <li onclick="showContent('it_security_admin')">IT Security Administrator</li>
+                <li onclick="showContent('cloud_engineer')">Cloud Engineer</li>
+                <li onclick="showContent('support_specialist')">Support Specialist</li>
+                <li onclick="showContent('itops_specialist')">Especialista em ITOps</li>
+            </ul>
+            <div id="it_security_admin" class="hidden-content">Atuei como Administrador de Segurança da Informação na MeedBR, gerenciando a segurança da infraestrutura de TI.</div>
+            <div id="cloud_engineer" class="hidden-content">Desempenhei funções como engenheiro de nuvem, implementando soluções baseadas em cloud.</div>
+            <div id="support_specialist" class="hidden-content">Atuei como especialista em suporte, ajudando usuários com problemas técnicos e gerenciando soluções.</div>
+            <div id="itops_specialist" class="hidden-content">Trabalhei como Especialista em ITOps, focando na eficiência operacional e automação de processos.</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
