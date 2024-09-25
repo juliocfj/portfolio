@@ -1,5 +1,8 @@
 body {
-    background-color: #f9e7b2; /* Fundo amarelo areia */
+    background-image: url('background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
 
@@ -7,7 +10,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
+    background-color: rgba(249, 231, 178, 0.8); 
 
 header {
     text-align: center;
@@ -20,7 +23,7 @@ nav {
 }
 
 .tab {
-    background-color: #6f3c3c; /* Cor bordô */
+    background-color: #9370DB; /* Cor roxo claro */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -30,13 +33,10 @@ nav {
 }
 
 .tab:hover {
-    background-color: #5b2b2b; /* Tom mais escuro ao passar o mouse */
+    background-color: #7a5bc9;
 }
 
 .content-section {
     display: none;
 }
 
-.content-section:target {
-    display: block;
-}
