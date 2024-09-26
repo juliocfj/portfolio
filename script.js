@@ -6,12 +6,15 @@ const content = {
         softskills: "Soft Skills",
         roles: "Roles",
         certifications: "Certifications & Courses",
-        projectContent: "Here are the projects I've worked on, including cloud infrastructure automation, monitoring setup, and more.",
-        technologiesContent: "Technologies I excel in include: Google Cloud, Kubernetes, Terraform, Ansible, and Linux.",
-        skillsContent: "My hard skills: Cloud Engineering, Networking, Automation, Cybersecurity, Fortinet, Microsoft Azure.",
-        softskillsContent: "My soft skills include: Leadership, Communication, Problem-solving, Team Collaboration.",
-        rolesContent: "Roles I've held: Cloud Engineer, IT Security Admin, ITOps Specialist, Network Engineer.",
-        certificationsContent: "Certifications and courses: Fortinet Certified Associate, Microsoft Azure Certification, Google Cloud training."
+        project1: "Detailed information about Project 1 in English.",
+        project2: "Detailed information about Project 2 in English.",
+        project3: "Detailed information about Project 3 in English.",
+        tech1: "Information about Technology 1 in English.",
+        tech2: "Information about Technology 2 in English.",
+        skill1: "Description of Skill 1 in English.",
+        softskill1: "Description of Soft Skill 1 in English.",
+        role1: "Description of Role 1 in English.",
+        certification1: "Description of Certification 1 in English."
     },
     pt: {
         projects: "Projetos",
@@ -20,12 +23,15 @@ const content = {
         softskills: "Habilidades Interpessoais",
         roles: "Funções",
         certifications: "Certificações e Cursos",
-        projectContent: "Aqui estão os projetos em que trabalhei, incluindo automação de infraestrutura em cloud, configuração de monitoramento, e mais.",
-        technologiesContent: "Tecnologias em que sou especialista: Google Cloud, Kubernetes, Terraform, Ansible, e Linux.",
-        skillsContent: "Minhas habilidades técnicas: Engenharia de Cloud, Redes, Automação, Segurança Cibernética, Fortinet, Microsoft Azure.",
-        softskillsContent: "Minhas habilidades interpessoais incluem: Liderança, Comunicação, Resolução de Problemas, Colaboração em Equipe.",
-        rolesContent: "Funções que ocupei: Engenheiro de Cloud, Administrador de Segurança de TI, Especialista em ITOps, Engenheiro de Redes.",
-        certificationsContent: "Certificações e cursos: Fortinet Certified Associate, Certificação Microsoft Azure, treinamento em Google Cloud."
+        project1: "Informações detalhadas sobre o Projeto 1 em português.",
+        project2: "Informações detalhadas sobre o Projeto 2 em português.",
+        project3: "Informações detalhadas sobre o Projeto 3 em português.",
+        tech1: "Informações sobre Tecnologia 1 em português.",
+        tech2: "Informações sobre Tecnologia 2 em português.",
+        skill1: "Descrição da Habilidade 1 em português.",
+        softskill1: "Descrição da Habilidade Interpessoal 1 em português.",
+        role1: "Descrição da Função 1 em português.",
+        certification1: "Descrição da Certificação 1 em português."
     },
     it: {
         projects: "Progetti",
@@ -34,50 +40,43 @@ const content = {
         softskills: "Competenze Trasversali",
         roles: "Ruoli",
         certifications: "Certificazioni e Corsi",
-        projectContent: "Ecco i progetti a cui ho lavorato, inclusa l'automazione dell'infrastruttura cloud, la configurazione del monitoraggio e altro.",
-        technologiesContent: "Tecnologie in cui eccello: Google Cloud, Kubernetes, Terraform, Ansible, e Linux.",
-        skillsContent: "Le mie competenze tecniche: Cloud Engineering, Networking, Automazione, Sicurezza informatica, Fortinet, Microsoft Azure.",
-        softskillsContent: "Le mie competenze trasversali includono: Leadership, Comunicazione, Problem-solving, Collaborazione di squadra.",
-        rolesContent: "Ruoli che ho ricoperto: Cloud Engineer, Amministratore di sicurezza IT, Specialista ITOps, Ingegnere di rete.",
-        certificationsContent: "Certificazioni e corsi: Fortinet Certified Associate, Certificazione Microsoft Azure, Formazione Google Cloud."
+        project1: "Informazioni dettagliate sul Progetto 1 in italiano.",
+        project2: "Informazioni dettagliate sul Progetto 2 in italiano.",
+        project3: "Informazioni dettagliate sul Progetto 3 in italiano.",
+        tech1: "Informazioni sulla Tecnologia 1 in italiano.",
+        tech2: "Informazioni sulla Tecnologia 2 in italiano.",
+        skill1: "Descrizione della Competenza 1 in italiano.",
+        softskill1: "Descrizione della Competenza Trasversale 1 in italiano.",
+        role1: "Descrizione del Ruolo 1 in italiano.",
+        certification1: "Descrizione della Certificazione 1 in italiano."
     }
 };
 
 function changeLanguage(lang) {
-    document.querySelectorAll('.tab').forEach(function(tab, index) {
-        switch (index) {
-            case 0:
-                tab.textContent = content[lang].projects;
-                break;
-            case 1:
-                tab.textContent = content[lang].technologies;
-                break;
-            case 2:
-                tab.textContent = content[lang].skills;
-                break;
-            case 3:
-                tab.textContent = content[lang].softskills;
-                break;
-            case 4:
-                tab.textContent = content[lang].roles;
-                break;
-            case 5:
-                tab.textContent = content[lang].certifications;
-                break;
-        }
-    });
-
-    document.getElementById('projects-content').textContent = content[lang].projectContent;
-    document.getElementById('technologies-content').textContent = content[lang].technologiesContent;
-    document.getElementById('skills-content').textContent = content[lang].skillsContent;
-    document.getElementById('softskills-content').textContent = content[lang].softskillsContent;
-    document.getElementById('roles-content').textContent = content[lang].rolesContent;
-    document.getElementById('certifications-content').textContent = content[lang].certificationsContent;
+    document.getElementById('projects-content').innerHTML = generateDropdown(lang, 'project');
+    document.getElementById('technologies-content').innerHTML = generateDropdown(lang, 'tech');
+    document.getElementById('skills-content').innerHTML = generateDropdown(lang, 'skill');
+    document.getElementById('softskills-content').innerHTML = generateDropdown(lang, 'softskill');
+    document.getElementById('roles-content').innerHTML = generateDropdown(lang, 'role');
+    document.getElementById('certifications-content').innerHTML = generateDropdown(lang, 'certification');
 }
 
-function showSection(section) {
-    document.querySelectorAll('.content-section').forEach(function(contentSection) {
-        contentSection.style.display = 'none';
+function generateDropdown(lang, type) {
+    return `
+        <button class="dropdown-btn" onclick="toggleDropdown('${type}1')">${content[lang][type + '1']}</button>
+        <div id="${type}1" class="dropdown-content">${content[lang][type + '1']}</div>
+    `;
+}
+
+function toggleDropdown(id) {
+    var dropdown = document.getElementById(id);
+    dropdown.classList.toggle("show");
+}
+
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
     });
-    document.getElementById(section).style.display = 'block';
+    document.getElementById(sectionId).style.display = 'block';
 }
