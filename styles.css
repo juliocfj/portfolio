@@ -1,29 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     color: white;
+    background-image: url('background.png');
+    background-size: cover; /* Garante que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Faz com que o background não role com o conteúdo */
 }
 
 header {
-    background-color: #ffcc00;
+    background-color: rgba(255, 204, 0, 0.8); /* Fundo com transparência */
     padding: 10px;
     text-align: center;
 }
 
-h1 {
-    color: #4b0082;
-}
-
-.language-buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
 nav {
-    background-color: #4b0082;
+    background-color: rgba(75, 0, 130, 0.8); /* Fundo roxo com transparência */
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -32,39 +26,82 @@ nav {
 .tab {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4b0082;
+    background-color: rgba(75, 0, 130, 0.8);
     color: white;
     cursor: pointer;
     margin: 0 5px;
 }
 
 .tab:hover {
-    background-color: #8a2be2;
+    background-color: rgba(138, 43, 226, 0.8); /* Cor mais clara ao passar o mouse */
 }
 
-.content-section {
-    margin: 20px;
-}
-
-.dropdown-btn {
-    background-color: #4b0082;
-    color: white;
+.dropdown {
+    display: none;
     padding: 10px;
-    margin: 5px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    font-size: 18px;
+    background-color: rgba(75, 0, 130, 0.8);
+    margin-top: 10px;
+}
+
+.dropdown.show {
+    display: block;
 }
 
 .dropdown-content {
-    display: none;
-    background-color: #8a2be2;
+    background-color: rgba(75, 0, 130, 0.8);
     padding: 10px;
-    margin: 5px 0;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content:hover {
+    background-color: rgba(138, 43, 226, 0.8);
+}
+
+.language-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.language-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
 }
 
 .show {
     display: block;
+}
+
+.project-item, .tech-item, .skill-item, .cert-item {
+    background-color: rgba(75, 0, 130, 0.8);
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project-item:hover, .tech-item:hover, .skill-item:hover, .cert-item:hover {
+    background-color: rgba(138, 43, 226, 0.8);
+}
+
+.neon-box {
+    background-color: rgba(75, 0, 130, 0.9);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
 }
