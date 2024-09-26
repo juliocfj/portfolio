@@ -8,13 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>My Portfolio</h1>
-        <div>
-            <button onclick="changeLanguage('en')"><img src="eng.png" alt="English"></button>
-            <button onclick="changeLanguage('pt')"><img src="br.png" alt="Português"></button>
-            <button onclick="changeLanguage('it')"><img src="ita.png" alt="Italiano"></button>
+        <h1 id="header-title">My Portfolio</h1>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('en')">
+                <img src="eng.png" alt="English">
+            </button>
+            <button onclick="changeLanguage('pt')">
+                <img src="br.png" alt="Português">
+            </button>
+            <button onclick="changeLanguage('it')">
+                <img src="ita.png" alt="Italiano">
+            </button>
         </div>
     </header>
+
     <nav>
         <div class="tab" onclick="showSection('projects-content')">Projects</div>
         <div class="tab" onclick="showSection('technologies-content')">Technologies</div>
@@ -23,14 +30,45 @@
         <div class="tab" onclick="showSection('roles-content')">Roles</div>
         <div class="tab" onclick="showSection('certifications-content')">Certifications & Courses</div>
     </nav>
+
     <main>
-        <div id="projects-content" class="content-section">Content for projects goes here.</div>
-        <div id="technologies-content" class="content-section" style="display:none;">Content for technologies goes here.</div>
-        <div id="skills-content" class="content-section" style="display:none;">Content for skills goes here.</div>
-        <div id="softskills-content" class="content-section" style="display:none;">Content for soft skills goes here.</div>
-        <div id="roles-content" class="content-section" style="display:none;">Content for roles goes here.</div>
-        <div id="certifications-content" class="content-section" style="display:none;">Content for certifications goes here.</div>
+        <div id="projects-content" class="content-section">
+            <button class="dropdown-btn" onclick="toggleDropdown('project1')">Project 1</button>
+            <div id="project1" class="dropdown-content">Detailed information about Project 1.</div>
+            <button class="dropdown-btn" onclick="toggleDropdown('project2')">Project 2</button>
+            <div id="project2" class="dropdown-content">Detailed information about Project 2.</div>
+            <button class="dropdown-btn" onclick="toggleDropdown('project3')">Project 3</button>
+            <div id="project3" class="dropdown-content">Detailed information about Project 3.</div>
+        </div>
+
+        <div id="technologies-content" class="content-section" style="display:none;">
+            <button class="dropdown-btn" onclick="toggleDropdown('tech1')">Technology 1</button>
+            <div id="tech1" class="dropdown-content">Information about Technology 1.</div>
+            <button class="dropdown-btn" onclick="toggleDropdown('tech2')">Technology 2</button>
+            <div id="tech2" class="dropdown-content">Information about Technology 2.</div>
+        </div>
+
+        <div id="skills-content" class="content-section" style="display:none;">
+            <button class="dropdown-btn" onclick="toggleDropdown('skill1')">Skill 1</button>
+            <div id="skill1" class="dropdown-content">Description of Skill 1.</div>
+        </div>
+
+        <div id="softskills-content" class="content-section" style="display:none;">
+            <button class="dropdown-btn" onclick="toggleDropdown('softskill1')">Soft Skill 1</button>
+            <div id="softskill1" class="dropdown-content">Description of Soft Skill 1.</div>
+        </div>
+
+        <div id="roles-content" class="content-section" style="display:none;">
+            <button class="dropdown-btn" onclick="toggleDropdown('role1')">Role 1</button>
+            <div id="role1" class="dropdown-content">Description of Role 1.</div>
+        </div>
+
+        <div id="certifications-content" class="content-section" style="display:none;">
+            <button class="dropdown-btn" onclick="toggleDropdown('certification1')">Certification 1</button>
+            <div id="certification1" class="dropdown-content">Description of Certification 1.</div>
+        </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
