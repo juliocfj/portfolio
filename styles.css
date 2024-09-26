@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #4b0082;
+}
+
+.language-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav {
+    background-color: #4b0082;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.tab:hover {
+    background-color: #8a2be2;
+}
+
+.content-section {
+    margin: 20px;
+}
+
+.dropdown-btn {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #8a2be2;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.show {
+    display: block;
+}
