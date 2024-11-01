@@ -1,107 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    color: white;
-    background-image: url('background.png');
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-attachment: fixed; /* Faz com que o background não role com o conteúdo */
+    font-family: Arial, sans-serif;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
-header {
-    background-color: rgba(255, 204, 0, 0.8); /* Fundo com transparência */
-    padding: 10px;
-    text-align: center;
-}
-
-nav {
-    background-color: rgba(75, 0, 130, 0.8); /* Fundo roxo com transparência */
-    padding: 10px;
+.container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
-.tab {
-    display: inline-block;
+.language-selection {
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-button {
     padding: 10px 20px;
-    background-color: rgba(75, 0, 130, 0.8);
-    color: white;
-    cursor: pointer;
-    margin: 0 5px;
-}
-
-.tab:hover {
-    background-color: rgba(138, 43, 226, 0.8); /* Cor mais clara ao passar o mouse */
-}
-
-.dropdown {
-    display: none;
-    padding: 10px;
-    background-color: rgba(75, 0, 130, 0.8);
-    margin-top: 10px;
-}
-
-.dropdown.show {
-    display: block;
-}
-
-.dropdown-content {
-    background-color: rgba(75, 0, 130, 0.8);
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-.dropdown-content:hover {
-    background-color: rgba(138, 43, 226, 0.8);
-}
-
-.language-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
+    background-color: #6a0dad;
     border: none;
-    cursor: pointer;
-}
-
-.language-btn img {
-    width: 30px;
-    height: 30px;
-}
-
-.content-section {
-    display: none;
-    padding: 20px;
-}
-
-.show {
-    display: block;
-}
-
-.project-item, .tech-item, .skill-item, .cert-item {
-    background-color: rgba(75, 0, 130, 0.8);
     color: white;
-    padding: 15px;
-    margin: 10px 0;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.project-item:hover, .tech-item:hover, .skill-item:hover, .cert-item:hover {
-    background-color: rgba(138, 43, 226, 0.8);
+.menu-button:hover {
+    background-color: #4b0082;
 }
 
-.neon-box {
-    background-color: rgba(75, 0, 130, 0.9);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
+.menu-button:active {
+    background-color: #32006b;
+}
+
+.content {
+    margin-top: 30px;
+    max-width: 80%;
+    transition: opacity 0.5s ease;
 }
