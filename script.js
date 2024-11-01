@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const languageSelector = document.getElementById("language");
     const content = document.querySelector(".content");
-    
+    const languageLabel = document.getElementById("language-label");
+
     const sections = {
         pt: {
             projetos: "Aqui estão meus projetos...",
@@ -15,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 cargos: "Cargos",
                 cursos: "Cursos e Certificações",
                 sobre: "Quem sou eu"
-            }
+            },
+            languageLabel: "Selecione o Idioma:"
         },
         en: {
             projetos: "Here are my projects...",
@@ -29,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 cargos: "Jobs",
                 cursos: "Courses and Certifications",
                 sobre: "About Me"
-            }
+            },
+            languageLabel: "Select Language:"
         },
         it: {
             projetos: "Qui ci sono i miei progetti...",
@@ -43,7 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 cargos: "Posizioni",
                 cursos: "Corsi e Certificazioni",
                 sobre: "Chi sono"
-            }
+            },
+            languageLabel: "Seleziona la Lingua:"
         }
     };
 
@@ -64,9 +68,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 500);
     }
 
+    function updateLanguageLabel(lang) {
+        languageLabel.textContent = sections[lang].languageLabel;
+    }
+
     languageSelector.addEventListener("change", () => {
         const lang = languageSelector.value;
         updateButtonsText(lang); 
+        updateLanguageLabel(lang);
         const section = document.querySelector(".menu-button.active")?.dataset.section || "sobre";
         updateContent(section);
     });
@@ -80,5 +89,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     updateButtonsText("en");
+    updateLanguageLabel("en");
 });
-
