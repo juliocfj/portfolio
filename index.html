@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,20 @@
 <body>
     <div class="container">
         <div class="language-selection">
-            <label for="language">Selecione o Idioma:</label>
+            <label id="language-label" for="language">Select Language:</label>
             <select id="language">
+                <option value="en">English</option>
                 <option value="pt">Português</option>
-                <option value="en">Inglês</option>
                 <option value="it">Italiano</option>
             </select>
         </div>
 
         <div class="menu">
-            <button class="menu-button" data-section="projetos">Projetos</button>
-            <button class="menu-button" data-section="tecnologias">Tecnologias</button>
-            <button class="menu-button" data-section="cargos">Cargos</button>
-            <button class="menu-button" data-section="cursos">Cursos e Certificações</button>
-            <button class="menu-button" data-section="sobre">Quem sou eu</button>
+            <button class="menu-button" data-section="projetos">Projects</button>
+            <button class="menu-button" data-section="tecnologias">Technologies</button>
+            <button class="menu-button" data-section="cargos">Jobs</button>
+            <button class="menu-button" data-section="cursos">Courses and Certifications</button>
+            <button class="menu-button" data-section="sobre">About Me</button>
         </div>
 
         <div class="content">
@@ -32,4 +32,3 @@
     </div>
 </body>
 </html>
-
