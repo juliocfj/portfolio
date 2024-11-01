@@ -35,29 +35,29 @@ document.addEventListener("DOMContentLoaded", function() {
             languageLabel: "Select Language:"
         },
         it: {
-           projetos: `Automazione e Deployment di Infrastruttura Cloud
-Descrizione: Ho automatizzato e gestito l'infrastruttura su Google Cloud utilizzando Kubernetes e Terraform, creando ambienti scalabili e sicuri per un'ottimale gestione delle risorse e del traffico.
-Tecnologie: Kubernetes, Terraform, GCP
-Risultati: Riduzione dei costi operativi e miglioramento della scalabilità in risposta a picchi di traffico.
+           projetos: `<strong>Automazione e Deployment di Infrastruttura Cloud</strong><br>
+Descrizione: Ho automatizzato e gestito l'infrastruttura su Google Cloud utilizzando Kubernetes e Terraform, creando ambienti scalabili e sicuri per un'ottimale gestione delle risorse e del traffico.<br>
+Tecnologie: Kubernetes, Terraform, GCP<br>
+Risultati: Riduzione dei costi operativi e miglioramento della scalabilità in risposta a picchi di traffico.<br><br>
 
-Sviluppo di una Base di Conoscenza Interna
-Descrizione: Ho implementato una base di conoscenza interna per documentare i processi di supporto, utilizzando Ansible e Terraform per l'automazione delle attività e la standardizzazione delle operazioni.
-Tecnologie: Ansible, Terraform
-Risultati: Riduzione del tempo di risoluzione delle richieste e maggiore efficienza nel supporto tecnico.
+<strong>Sviluppo di una Base di Conoscenza Interna</strong><br>
+Descrizione: Ho implementato una base di conoscenza interna per documentare i processi di supporto, utilizzando Ansible e Terraform per l'automazione delle attività e la standardizzazione delle operazioni.<br>
+Tecnologie: Ansible, Terraform<br>
+Risultati: Riduzione del tempo di risoluzione delle richieste e maggiore efficienza nel supporto tecnico.<br><br>
 
-Configurazione di Load Balancer HTTP(S)
-Descrizione: Ho configurato load balancer regionali su Google Cloud per una distribuzione efficiente del traffico, ottimizzando l'esperienza utente e la resilienza dei servizi.
-Tecnologie: Google Cloud Platform, NGINX
-Risultati: Miglioramento della reattività delle applicazioni e maggiore disponibilità per i clienti.
+<strong>Configurazione di Load Balancer HTTP(S)</strong><br>
+Descrizione: Ho configurato load balancer regionali su Google Cloud per una distribuzione efficiente del traffico, ottimizzando l'esperienza utente e la resilienza dei servizi.<br>
+Tecnologie: Google Cloud Platform, NGINX<br>
+Risultati: Miglioramento della reattività delle applicazioni e maggiore disponibilità per i clienti.<br><br>
 
-Migrazione del Database su Cloud SQL
-Descrizione: Ho migrato un database PostgreSQL on-premise su Cloud SQL utilizzando il Database Migration Service, configurando anche la rete e le regole di firewall per garantire la sicurezza della migrazione.
-Tecnologie: Google Cloud, PostgreSQL
-Risultati: Migrazione sicura e senza interruzioni, con aumento dell'affidabilità del database.
+<strong>Migrazione del Database su Cloud SQL</strong><br>
+Descrizione: Ho migrato un database PostgreSQL on-premise su Cloud SQL utilizzando il Database Migration Service, configurando anche la rete e le regole di firewall per garantire la sicurezza della migrazione.<br>
+Tecnologie: Google Cloud, PostgreSQL<br>
+Risultati: Migrazione sicura e senza interruzioni, con aumento dell'affidabilità del database.<br><br>
 
-Gestione della Sicurezza e VPN
-Descrizione: Ho implementato soluzioni per il monitoraggio della sicurezza e l'accesso VPN, assicurando la sicurezza dei dati e il controllo degli accessi.
-Tecnologie: Fortinet, Docker, Jenkins
+<strong>Gestione della Sicurezza e VPN</strong><br>
+Descrizione: Ho implementato soluzioni per il monitoraggio della sicurezza e l'accesso VPN, assicurando la sicurezza dei dati e il controllo degli accessi.<br>
+Tecnologie: Fortinet, Docker, Jenkins<br>
 Risultati: Ambiente di rete più sicuro e monitorato, proteggendo dalle minacce esterne.`,
         
         tecnologias: `Infrastruttura e Cloud:
