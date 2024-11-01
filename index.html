@@ -1,74 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1 id="header-title">My Portfolio</h1>
-        <div class="language-buttons">
-            <button onclick="changeLanguage('en')">
-                <img src="eng.png" alt="English">
-            </button>
-            <button onclick="changeLanguage('pt')">
-                <img src="br.png" alt="Português">
-            </button>
-            <button onclick="changeLanguage('it')">
-                <img src="ita.png" alt="Italiano">
-            </button>
-        </div>
-    </header>
-
-    <nav>
-        <div class="tab" onclick="showSection('projects-content')">Projects</div>
-        <div class="tab" onclick="showSection('technologies-content')">Technologies</div>
-        <div class="tab" onclick="showSection('skills-content')">Hard Skills</div>
-        <div class="tab" onclick="showSection('softskills-content')">Soft Skills</div>
-        <div class="tab" onclick="showSection('roles-content')">Roles</div>
-        <div class="tab" onclick="showSection('certifications-content')">Certifications & Courses</div>
-    </nav>
-
-    <main>
-        <div id="projects-content" class="content-section">
-            <button class="dropdown-btn" onclick="toggleDropdown('project1')">Project 1</button>
-            <div id="project1" class="dropdown-content">Detailed information about Project 1.</div>
-            <button class="dropdown-btn" onclick="toggleDropdown('project2')">Project 2</button>
-            <div id="project2" class="dropdown-content">Detailed information about Project 2.</div>
-            <button class="dropdown-btn" onclick="toggleDropdown('project3')">Project 3</button>
-            <div id="project3" class="dropdown-content">Detailed information about Project 3.</div>
+    <div class="container">
+        <div class="language-selection">
+            <label for="language">Selecione o Idioma:</label>
+            <select id="language">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+                <option value="it">Italiano</option>
+            </select>
         </div>
 
-        <div id="technologies-content" class="content-section" style="display:none;">
-            <button class="dropdown-btn" onclick="toggleDropdown('tech1')">Technology 1</button>
-            <div id="tech1" class="dropdown-content">Information about Technology 1.</div>
-            <button class="dropdown-btn" onclick="toggleDropdown('tech2')">Technology 2</button>
-            <div id="tech2" class="dropdown-content">Information about Technology 2.</div>
+        <div class="menu">
+            <button class="menu-button" data-section="projetos">Projetos</button>
+            <button class="menu-button" data-section="tecnologias">Tecnologias</button>
+            <button class="menu-button" data-section="cargos">Cargos</button>
+            <button class="menu-button" data-section="cursos">Cursos e Certificações</button>
+            <button class="menu-button" data-section="sobre">Quem sou eu</button>
         </div>
 
-        <div id="skills-content" class="content-section" style="display:none;">
-            <button class="dropdown-btn" onclick="toggleDropdown('skill1')">Skill 1</button>
-            <div id="skill1" class="dropdown-content">Description of Skill 1.</div>
+        <div class="content">
+            <!-- Conteúdo das seções será inserido aqui pelo script -->
         </div>
-
-        <div id="softskills-content" class="content-section" style="display:none;">
-            <button class="dropdown-btn" onclick="toggleDropdown('softskill1')">Soft Skill 1</button>
-            <div id="softskill1" class="dropdown-content">Description of Soft Skill 1.</div>
-        </div>
-
-        <div id="roles-content" class="content-section" style="display:none;">
-            <button class="dropdown-btn" onclick="toggleDropdown('role1')">Role 1</button>
-            <div id="role1" class="dropdown-content">Description of Role 1.</div>
-        </div>
-
-        <div id="certifications-content" class="content-section" style="display:none;">
-            <button class="dropdown-btn" onclick="toggleDropdown('certification1')">Certification 1</button>
-            <div id="certification1" class="dropdown-content">Description of Certification 1.</div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
+
