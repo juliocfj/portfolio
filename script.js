@@ -139,7 +139,8 @@ Periodo: 2015 - 2020`,
         const lang = languageSelector.value;
         content.style.opacity = 0;
         setTimeout(() => {
-            content.textContent = sections[lang][section];
+            content.innerHTML = sections[lang][section];
+            #content.textContent = sections[lang][section];
             content.style.opacity = 1;
         }, 500);
     }
